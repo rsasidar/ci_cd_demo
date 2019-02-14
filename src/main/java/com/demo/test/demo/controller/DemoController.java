@@ -10,7 +10,7 @@ public class DemoController {
 	
 	@GetMapping("/messages")
 	public String retrieveCoursesForStudent() {
-		return "Test Message.....";
+		return "Test Message......";
 	}
 	
 	@GetMapping("/greeting")
