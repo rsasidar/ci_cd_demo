@@ -17,7 +17,7 @@ spec:
         app: demo-service
     spec:
       containers:
-      - image: 192.168.65.2:8123/cidemo-image:BUILD_NUMBER
+      - image: 192.168.65.2:8123/cidemo-image:20
         imagePullPolicy: Always
         name: itemservice
         resources:
@@ -53,19 +53,3 @@ spec:
         command: ["/bin/sh","-c","/demo/deploy.sh"]
         ports:
         - containerPort: 9091
-        readinessProbe:
-          successThreshold: 1
-          failureThreshold: 10
-          timeoutSeconds: 60
-          tcpSocket:
-            port: 9091
-          initialDelaySeconds: 100
-          periodSeconds: 60
-        livenessProbe:
-          successThreshold: 1
-          failureThreshold: 10
-          timeoutSeconds: 60
-          tcpSocket:
-            port: 9091
-          initialDelaySeconds: 100
-          periodSeconds: 60

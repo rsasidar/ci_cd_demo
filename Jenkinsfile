@@ -53,7 +53,7 @@
 					    sh "docker tag ${dTag} 192.168.65.2:8123/${dTag}"
 					    sh "docker login -u admin -p admin123 192.168.65.2:8123"
 					    
-					    echo "Pushing image to Nexus...."
+					    echo "Pushing image to Nexus....   192.168.65.2:8123/${dTag}"
 					    sh "docker push 192.168.65.2:8123/${dTag}"
 	                    
 	                    echo "Pulling Docker image to Node Machine.."
