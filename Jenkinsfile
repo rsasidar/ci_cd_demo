@@ -40,13 +40,16 @@
                 steps {
                 	script {
 	                    // Push Image to Nexus
-
+						echo "checking image name"
+						echo "Name ${dTag}"
+						
 						docker_image = "cidemo-image"
+						
                         dTtag = "${docker_image}:${env.BUILD_NUMBER}"
                         
 						echo "Tagging image...."
 					    
-					    sh "docker tag cidemo-image:${env.BUILD_NUMBER} 192.168.65.2:8123/${dTag}"
+					    sh "docker tag ${dTag} 192.168.65.2:8123/${dTag}"
 					    sh "docker login -u admin -p admin123 192.168.65.2:8123"
 					    
 					    echo "Pushing image to Nexus...."
