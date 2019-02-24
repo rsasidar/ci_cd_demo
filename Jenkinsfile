@@ -26,10 +26,10 @@
                     echo 'Building using maven...'
                     sh 'mvn clean package -DskipTests'
 
+
 					buildimage = "cidemo-build:${env.BUILD_NUMBER}"
                     echo "Image building"
-                    docker.build("${buildimage}")
-                    
+                    buildImage("${buildimage}")
                 }
            }
        }
