@@ -57,7 +57,7 @@
 					    sh "docker push 192.168.65.2:8123/${dTag}"
 	                    
 	                    echo "Pulling Docker image to Node Machine.."
-						sh "sed -i 's/BUILD_NUMBER/${env.BUILD_NUMBER}/g' demo_deploy.yml"
+						sh "sed -i '' 's/BUILD_NUMBER/${env.BUILD_NUMBER}/g' demo_deploy.yml"
 						sh "kubectl apply -f demo_deploy.yml --record=true --validate=false"
 						sh "kubectl apply -f demo_service.yml --record=true --validate=false"
 	                    
