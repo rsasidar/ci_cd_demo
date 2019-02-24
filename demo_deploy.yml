@@ -17,9 +17,9 @@ spec:
         app: demo-service
     spec:
       containers:
-      - image: 192.168.65.2:8123/cidemo-image:20
+      - image: 192.168.65.2:8123/cidemo-image:BUILD_NUMBER
         imagePullPolicy: Always
-        name: itemservice
+        name: cidemo-image
         resources:
           requests:
             memory: 500Mi
