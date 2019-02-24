@@ -29,6 +29,7 @@
                     echo "Image building"
                     buildImage("cidemo-build", ${env.BUILD_NUMBER})
                 }
-        }
+           }
+       }
 }
             
