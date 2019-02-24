@@ -25,9 +25,10 @@
 
                     echo 'Building using maven...'
                     sh 'mvn clean package -DskipTests'
-
-                    echo "Image building"
-                    buildImage("${tag}")
+					script {
+	                    echo "Image building"
+	                    docker.build("${tag}")
+	                }
                 }
            }
        }
