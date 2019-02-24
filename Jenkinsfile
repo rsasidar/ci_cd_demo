@@ -14,6 +14,21 @@
                     }
                 }
             }
+            
+            stage('Build') {
+                steps {
+                    checkout scm
+
+                    echo "Pulled Code!!"
+
+                    init(params.WORKSPACE)
+
+                    echo 'Building using maven...'
+                    sh 'mvn clean package -DskipTests'
+
+                    echo "Image building"
+                    buildImage("cidemo-build", ${env.BUILD_NUMBER})
+                }
         }
 }
             
