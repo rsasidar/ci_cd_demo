@@ -1,0 +1,12 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: demo-service-dev
+spec:
+  selector:
+    app: demo-service
+  ports:
+  - protocol: TCP
+    port: 9091
+    targetPort: 9091
+  type: NodePort
