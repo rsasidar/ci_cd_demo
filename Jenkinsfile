@@ -31,7 +31,7 @@
                     sh 'mvn clean package -DskipTests'
 					script {
 	                    echo "Image building"
-	                    docker.build("${image}")
+	                    docker.build("${dTtag}")
 	                }
                 }
            }
