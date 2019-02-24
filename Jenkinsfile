@@ -5,7 +5,7 @@
                 steps {
                     script {
 
-                        tag = "cidemo-build-${env.BUILD_NUMBER}"
+                        tag = "cidemo-image:${env.BUILD_NUMBER}"
 
                         echo "config params: "
                         echo "docker image: ${tag}"
@@ -26,10 +26,8 @@
                     echo 'Building using maven...'
                     sh 'mvn clean package -DskipTests'
 
-
-					buildimage = "cidemo-build:${env.BUILD_NUMBER}"
                     echo "Image building"
-                    buildImage("${buildimage}")
+                    buildImage("${tag}")
                 }
            }
        }
