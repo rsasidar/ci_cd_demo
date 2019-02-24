@@ -1,7 +1,7 @@
  pipeline {
         agent any
         
-        options { skipDefaultCheckout() }
+        //options { skipDefaultCheckout() }
          
         stages {
             stage('Env') {
@@ -32,7 +32,6 @@
 					script {
 	                    echo "Image building"
 	                    docker.build("${image}")
-	                    
 	                }
                 }
            }
