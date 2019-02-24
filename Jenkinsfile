@@ -21,7 +21,7 @@
 
                     echo "Pulled Code!!"
 
-                    init(params.WORKSPACE)
+                    //init(params.WORKSPACE)
 
                     echo 'Building using maven...'
                     sh 'mvn clean package -DskipTests'
