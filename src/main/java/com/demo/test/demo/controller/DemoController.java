@@ -16,6 +16,11 @@ public class DemoController {
 	@GetMapping("/greeting")
 	public String retrieveDetailsForCourse() {
 		return "Greetings .... ";
+	}	
+	
+	@GetMapping("/greeting/test/tests")
+	public String retrieveDetailsForCourse() {
+		return "Greetings .... ";
 	}
 
 }
