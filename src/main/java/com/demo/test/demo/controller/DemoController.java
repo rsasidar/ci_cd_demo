@@ -22,5 +22,19 @@ public class DemoController {
 	public String retrieveDetailsForCourse() {
 		return "Greetings .... ";
 	}
+	@GetMapping("/messages1")
+	public String retrieveCoursesForStudent() {
+		return "Test Message......";
+	}
+	
+	@GetMapping("/greeting1")
+	public String retrieveDetailsForCourse() {
+		return "Greetings .... ";
+	}	
+	
+	@GetMapping("/greeting/test/tests1")
+	public String retrieveDetailsForCourse() {
+		return "Greetings .... ";
+	}
 
 }
